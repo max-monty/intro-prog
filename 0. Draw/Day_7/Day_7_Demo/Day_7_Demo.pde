@@ -1,5 +1,3 @@
-// Fish Demo - void functions
-
 // --- CUSTOM VARIABLES ---
 float fish0X;
 float fish0Y;
@@ -39,21 +37,10 @@ void draw() {
   drawFish(fish1X, fish1Y);
   drawFish(fish2X, fish2Y);
 
-  // --- MOVE THE FISH using variables ---
-  fish0X -= speed0;      // Move left
-  if (fish0X < -75) {          // If fish goes off left edge
-    fish0X = width + 100;       // Wrap to right side
-  }
-  
-  fish1X -= speed1;     
-  if (fish1X < -75) {          
-    fish1X = width + 100;      
-  }
-  
-  fish2X -= speed2;      
-  if (fish2X < -75) {        
-    fish2X = width + 100;       
-  }
+  // --- MOVE THE FISH using a function ---
+  fish0X = updateXPos(fish0X, speed0);
+  fish1X = updateXPos(fish1X, speed1);
+  fish2X = updateXPos(fish2X, speed2);
 
 
 
@@ -100,7 +87,13 @@ void drawFish(float x, float y) {
   ellipse(x - 45, y - 5, 10, 10);
 }
 
-
+float updateXPos(float x, float speed){
+  x -= speed;      // Move left
+  if (x < -75) {          // If fish goes off left edge
+    x = width + 100;       // Wrap to right side
+  }
+  return x;
+}
 
 // Function to display variable information
 void displayInfo() {

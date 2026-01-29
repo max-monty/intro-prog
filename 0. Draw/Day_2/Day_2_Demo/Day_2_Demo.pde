@@ -2,11 +2,14 @@
 
 size(400, 300);  // Create a 400x300 pixel canvas
 
+
 // --- TAIL FIN ---
 
 triangle(300, 120, // Point 1: tip of tail
   250, 120, // Point 2: top of tail base
   250, 180);      // Point 3: bottom of tail base
+
+
 
 triangle(300, 180, // Point 1: tip of tail
   250, 120, // Point 2: top of tail base

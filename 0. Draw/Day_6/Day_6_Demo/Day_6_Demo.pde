@@ -33,21 +33,15 @@ void setup() {
 void draw() {
   background(170, 220, 240);
 
-
   // --- DRAW THE FISH using variables ---
   drawFish(fish0X, fish0Y);
   drawFish(fish1X, fish1Y);
   drawFish(fish2X, fish2Y);
 
-  // --- MOVE THE FISH using a function ---
-  fish0X = updateXPos(fish0X, speed0);
-  fish1X = updateXPos(fish1X, speed1);
-  fish2X = updateXPos(fish2X, speed2);
-
-
-
-  // --- DISPLAY BUILT-IN VARIABLES ---
-  displayInfo();
+  // --- MOVE THE FISH using variables ---
+  fish0X -= speed0;      
+  fish1X -= speed1;     
+  fish2X -= speed2;      
 }
 
 
@@ -89,13 +83,7 @@ void drawFish(float x, float y) {
   ellipse(x - 45, y - 5, 10, 10);
 }
 
-float updateXPos(float x, float speed){
-  x -= speed;      // Move left
-  if (x < -75) {          // If fish goes off left edge
-    x = width + 100;       // Wrap to right side
-  }
-  return x;
-}
+
 
 // Function to display variable information
 void displayInfo() {
