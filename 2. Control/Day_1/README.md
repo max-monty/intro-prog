@@ -13,4 +13,5 @@
 - Display creative sentences using `text()`
 
 ## Homework
-- Placeholder for homework assignment
+- [Random() Video (~11')](https://www.youtube.com/watch?v=50Rzvxvi8D0)
+- and or [Coding Traing 1:53 -> 2:02 Random Numbers](https://www.youtube.com/watch?v=4JzDttgdILQ)
