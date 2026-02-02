@@ -14,4 +14,4 @@
 - Practice generating controlled randomness within ranges
 
 ## Homework
-- [Random Video (~11')](https://www.youtube.com/watch?v=50Rzvxvi8D0)
+- [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)
