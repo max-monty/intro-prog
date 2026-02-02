@@ -14,4 +14,4 @@
 - Practice generating controlled randomness within ranges
 
 ## Homework
-- Placeholder for homework assignment
+- [Random Video (~11')](https://www.youtube.com/watch?v=50Rzvxvi8D0)
