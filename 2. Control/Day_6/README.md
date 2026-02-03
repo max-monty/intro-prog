@@ -14,4 +14,4 @@
 - Review common mistakes and misconceptions
 
 ## Homework
-- Study for quiz using Study Guide and Practice Quiz
+- Review any/all String, boolean, and conditional material covered in day 1-5 of this unit 
