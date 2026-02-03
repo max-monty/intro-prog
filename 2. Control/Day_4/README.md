@@ -13,4 +13,5 @@
 - Display appropriate messages and colors for each grade
 
 ## Homework
-- Placeholder for homework assignment
+- Watch: [2:28-2:50](https://www.youtube.com/watch?v=4JzDttgdILQ)
+- Code: Your own version of the bouncing ball
