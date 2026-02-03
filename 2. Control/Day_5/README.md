@@ -13,4 +13,4 @@
 - Practice combining conditions with logical operators
 
 ## Homework
-- Placeholder for homework assignment
+- Use a chatbot of your choice to review nested if statements. Create a sketch with a complex if-else-if-else statement with at least one nested if statement. 
