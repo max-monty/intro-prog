@@ -12,7 +12,7 @@
 
 ## Activity: Particle Universe
 
-Create a mesmerizing particle system that generates unique visual compositions. Every run creates art that has never existed before!
+Create a  particle system that generates unique visual compositions.
 
 ### Level 1: Stardust
 Create a simple particle generator that fills the screen with dots.
