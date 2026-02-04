@@ -55,4 +55,5 @@ Create a creature with personality and complex behaviors.
 Open `Day_3_Activity_creature/Day_3_Activity_creature.pde` to begin.
 
 ## Homework
-- Placeholder for homework assignment
+- [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)
+- Code: A shape that disappears if clicked

@@ -14,4 +14,5 @@
 - Complete Unit 2 Quiz
 
 ## Homework
-- Placeholder for homework assignment
+- Watch: [2:50 - 3:12](https://www.youtube.com/watch?v=4JzDttgdILQ)
+- Code: Use a loop to draw shapes across a sketch

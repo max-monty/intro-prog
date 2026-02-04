@@ -58,4 +58,5 @@ Create a full mood-responsive art piece.
 Open `Day_4_Activity_moodring/Day_4_Activity_moodring.pde` to begin.
 
 ## Homework
-- Placeholder for homework assignment
+- Watch: [2:28-2:50](https://www.youtube.com/watch?v=4JzDttgdILQ)
+- Code: Your own version of the bouncing ball

@@ -59,4 +59,4 @@ Create a full mini-game with objectives.
 Open `Day_5_Activity_quadrantquest/Day_5_Activity_quadrantquest.pde` to begin.
 
 ## Homework
-- Placeholder for homework assignment
+- Use a chatbot of your choice to review nested if statements. Create a sketch with a complex if-else-if-else statement with at least one nested if statement. 

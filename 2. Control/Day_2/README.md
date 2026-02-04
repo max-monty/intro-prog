@@ -52,4 +52,5 @@ Create an evolving, interactive particle ecosystem.
 Open `Day_2_Activity_particles/Day_2_Activity_particles.pde` to begin.
 
 ## Homework
-- Placeholder for homework assignment
+- [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)
+- Code: any sketch that uses random to create a visual effect
