@@ -40,7 +40,6 @@ void draw() {
   // TODO: Make particles fade over time
   //
   // Hints:
-  // - Store particle data in arrays
   // - Update positions each frame
   // - Use semi-transparent background for trails
   // ============================================
@@ -50,7 +49,7 @@ void draw() {
   // LEVEL 4: Living Canvas
   // ============================================
   // TODO: Particles attracted/repelled by mouse
-  // TODO: Add gravity toggle
+  // TODO: Add gravity 
   // TODO: Connect nearby particles with lines
   // ============================================
 
@@ -60,27 +59,11 @@ void mousePressed() {
   // ============================================
   // LEVEL 1: Spawn particles here
   // ============================================
-  // TODO: Use a for loop to create multiple particles
   // TODO: Each particle at random position near mouse
   // TODO: Random size with random(5, 20)
   // TODO: Random color with random(256)
-  //
-  // Hints:
-  // - for (int i = 0; i < 10; i++) { ... }
-  // - float x = mouseX + random(-30, 30);
-  // - circle(x, y, size);
+
   // ============================================
 
 
-}
-
-void keyPressed() {
-  // Clear canvas with 'C'
-  if (key == 'c' || key == 'C') {
-    background(10, 10, 30);
-  }
-
-  // TODO Level 2: Add 'W' for warm, switch key for cool
-  // TODO Level 3: Add SPACE for particle burst
-  // TODO Level 4: Add 'G' for gravity toggle
 }
