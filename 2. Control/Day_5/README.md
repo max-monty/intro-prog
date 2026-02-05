@@ -9,54 +9,41 @@
 
 ---
 
-## Activity: Quadrant Quest
+## Activity: Conditional Testing (Continued)
 
-Create an interactive exploration game where different regions of the screen have unique behaviors, visuals, and secrets. Use nested if statements to create a rich, layered world!
+Continue expanding your project from Days 3-4. Use nested `if` statements and logical operators (`&&`, `||`, `!`) to add layered, complex behavior.
 
-### Level 1: Four Kingdoms
-Divide the screen into 4 quadrants, each a different "kingdom."
-- **Top-Left**: Ice Kingdom (blue/white, snowflakes fall)
-- **Top-Right**: Fire Kingdom (red/orange, embers rise)
-- **Bottom-Left**: Forest Kingdom (green, leaves drift)
-- **Bottom-Right**: Ocean Kingdom (blue/teal, bubbles float)
-- Use nested if statements: first check if mouse is in top/bottom half, then check left/right
-- Display the kingdom name when mouse enters each region
+### Expanding Your Project
 
-### Level 2: Kingdom Interactions
-Add interactive elements to each kingdom.
-- Each kingdom has a clickable object in its center:
-  - Ice: Click the snowflake to create a blizzard
-  - Fire: Click the flame to create an explosion
-  - Forest: Click the tree to grow flowers
-  - Ocean: Click the wave to spawn fish
-- Use nested conditions: check which kingdom you're in, THEN check if you clicked the object
-- Add a score or collection system (collect items from each kingdom)
+#### Left or Right
+- Use nested ifs to detect quadrants: first check top/bottom, then check left/right within each half
+- Combine conditions with `&&` to create special corner zones with unique messages
+- Add a "dead zone" in the center using `&&` (e.g., `mouseX > width/2 - 50 && mouseX < width/2 + 50`) with its own behavior
 
-### Level 3: The Border Zones
-Create special zones where kingdoms overlap.
-- The center of the screen is a "Nexus" zone where all elements mix
-- Each border between kingdoms has unique effects:
-  - Ice + Fire border: Steam/mist effects
-  - Forest + Ocean border: Swamp with lily pads
-  - Ice + Forest border: Frozen trees
-  - Fire + Ocean border: Volcanic islands
-- Use complex nested conditions or logical operators (&&) to detect border zones
-- Border zones have their own collectibles or challenges
+#### Billiard Ball
+- Use nested ifs to change the ball's behavior based on which quadrant it's in (e.g., faster in top-right, changes color in bottom-left)
+- Add a second ball and use `&&` to detect when both balls are in the same region
+- Use `||` to trigger effects when the ball is near any edge
 
-### Level 4: Quest System
-Create a full mini-game with objectives.
-- Player has a quest log with tasks: "Visit all 4 kingdoms," "Collect 3 items from Ice Kingdom," etc.
-- Add a player character that moves with arrow keys (stays within bounds)
-- Enemies or obstacles that behave differently in each kingdom
-- Power-ups that only work in certain kingdoms
-- Hidden areas that require visiting kingdoms in a specific order
-- Boss battle in the Nexus zone that combines all elements
-- Win/lose conditions with restart capability
+#### One-Person Pong
+- Use nested conditions in scoring: check if the ball was returned AND where on the paddle it hit for bonus points
+- Add power-up zones on screen: if the ball passes through a zone AND the player presses a key, activate a power-up
+- Use `&&` to create combo conditions (e.g., score > 10 AND ball speed > threshold shows a special effect)
+
+#### Choose Your Own Adventure
+- Use nested ifs for branching dialogue: check which room the player is in, THEN check which option they clicked
+- Add items that only work in certain rooms using `&&` (e.g., have key AND in locked room)
+- Use `||` to create multiple paths to the same outcome
+
+#### State Machines I-IV
+- Nest conditions to check both the current state AND where the user clicked for different outcomes
+- Use `&&` to require the user to click inside the square AND press a key simultaneously to change state
+- Create a grid of squares where clicking one affects its neighbors using nested position checks
 
 ---
 
-## Starter Code
-Open `Day_5_Activity_quadrantquest/Day_5_Activity_quadrantquest.pde` to begin.
+## Getting Started
+Continue working in the sketch folder from Days 3-4.
 
 ## Homework
-- Use a chatbot of your choice to review nested if statements. Create a sketch with a complex if-else-if-else statement with at least one nested if statement. 
+- Use a chatbot of your choice to review nested if statements. Create a sketch with a complex if-else-if-else statement with at least one nested if statement.

@@ -9,53 +9,41 @@
 
 ---
 
-## Activity: Mood Ring Visualizer
+## Activity: Conditional Testing (Continued)
 
-Create an interactive mood ring that responds to mouse position with beautiful color transitions and visual effects. The ring analyzes your "energy" based on where you move and displays different moods, colors, and patterns!
+Continue working on your Day 3 project. Use `if-else` and `if-else if-else` chains to add more complex behavior and multiple outcomes.
 
-### Level 1: Basic Mood Ring
-Create a ring that changes color based on horizontal mouse position.
-- Divide the screen into 4 zones (left to right)
-- Zone 1 (far left): "Calm" - blue ring
-- Zone 2: "Content" - green ring
-- Zone 3: "Energetic" - yellow ring
-- Zone 4 (far right): "Passionate" - red ring
-- Display the mood name below the ring
-- Use if-else if-else to determine which zone the mouse is in
+### Expanding Your Project
 
-### Level 2: Gradient Moods
-Add more nuanced mood detection with visual feedback.
-- Add 6+ mood states based on mouseX position
-- Include "Anxious" (purple), "Creative" (orange), "Mysterious" (deep purple)
-- Add a secondary ring that pulses based on mouseY (bigger pulse = more intense)
-- Display a mood description that changes with each state
-- Background color should gradually shift to complement the ring
+#### Left or Right
+- Use `if-else if-else` to divide the screen into 4+ zones (e.g., far left, left, right, far right) with different text messages for each
+- Change the background color based on which zone the cursor is in
+- Add vertical zones using mouseY so the text also reports top, middle, or bottom
 
-### Level 3: Animated Mood Display
-Create animated visual effects for each mood.
-- Each mood has unique visual effects:
-  - Calm: slow, gentle ripples expanding from center
-  - Energetic: fast, bouncing particles
-  - Passionate: flame-like shapes rising
-  - Mysterious: swirling stars or sparkles
-- The ring itself animates (pulses, glows, rotates)
-- Add smooth transitions between moods using lerp()
-- Display an "aura" around the ring that matches the mood
+#### Billiard Ball
+- Use `if-else` to change the ball's color depending on which half of the screen it's in
+- Add `if-else if-else` to change the ball's speed or size based on its position (e.g., faster on the right, slower on the left)
+- Add a trail or visual effect that changes based on the ball's direction
 
-### Level 4: Personal Mood Portrait
-Create a full mood-responsive art piece.
-- Multiple visual elements that all respond to mood
-- Background patterns unique to each mood
-- Sound or visual "heartbeat" that changes tempo with energy level
-- Add a "mood history" - trail showing recent mood changes
-- Create a "reading" mode: hold SPACE for 3 seconds to get a detailed mood analysis
-- Allow saving/screenshotting favorite mood combinations
-- Add keyboard controls to lock certain aspects while changing others
+#### One-Person Pong
+- Use `if-else if-else` to create scoring zones: hitting the ball back from different paddle positions scores different amounts
+- Add difficulty levels that change ball speed or paddle size based on the score
+- Display different messages based on score ranges (e.g., "Warming Up", "On Fire", "Unstoppable")
+
+#### Choose Your Own Adventure
+- Use `if-else if-else` chains to create rooms with 3+ clickable choices each
+- Add an inventory system where picking up items changes the available options
+- Display different descriptions and visuals for each room/outcome
+
+#### State Machines I-IV
+- Expand your state machine to handle 3+ states with different colors (e.g., white → gray → black)
+- Add multiple squares that each track their own state independently
+- Use `if-else if-else` to create different visual feedback for each state (color, size, border)
 
 ---
 
-## Starter Code
-Open `Day_4_Activity_moodring/Day_4_Activity_moodring.pde` to begin.
+## Getting Started
+Continue working in the sketch folder you created on Day 3.
 
 ## Homework
 - Watch: [2:28-2:50](https://www.youtube.com/watch?v=4JzDttgdILQ)

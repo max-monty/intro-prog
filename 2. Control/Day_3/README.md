@@ -10,49 +10,26 @@
 
 ---
 
-## Activity: Digital Creature
+## Activity: Conditional Testing
 
-Create an interactive digital creature that responds to your actions! Use boolean variables to control its states and if statements to change its appearance and behavior.
+Choose one of the following project prompts to explore conditionals in Processing:
 
-### Level 1: Mood Toggle
-Create a simple face that toggles between happy and sad.
-- Create a boolean variable `isHappy` starting as `true`
-- If `isHappy` is true: draw a smile (arc curving up) and bright eyes
-- If `isHappy` is false: draw a frown (arc curving down) and droopy eyes
-- Press SPACE to toggle between moods
-- Change the background color based on mood (happy = warm, sad = cool)
+![Project Prompts](conditional_activities.png)
 
-### Level 2: Multi-State Creature
-Add more states and visual feedback.
-- Add boolean variables: `isAwake`, `isHungry`, `isScared`
-- Press 'A' to toggle awake/asleep (closed eyes when asleep)
-- Press 'H' to toggle hungry (show tongue or open mouth)
-- Press 'S' to toggle scared (wide eyes, shaking)
-- Each state should change the creature's appearance
-- Display the current states as text on screen
-
-### Level 3: Environmental Response
-Make your creature respond to the environment.
-- If mouse is on the left side, creature looks left
-- If mouse is on the right side, creature looks right
-- If mouse is above creature, it looks up
-- If mouse is too close (within 100 pixels), creature gets scared
-- Add a "petting" zone - if mouse is on the creature, it becomes happy
-
-### Level 4: Living Creature
-Create a creature with personality and complex behaviors.
-- Creature has needs that change over time (gets hungry, gets sleepy)
-- Clicking feeds the creature (if hungry)
-- Holding mouse still for 3 seconds pets the creature (becomes happy)
-- Creature "breathes" - subtle size pulsing
-- Eyes follow the mouse cursor
-- Add sound effects or visual feedback for interactions
-- Create multiple creature "skins" that can be toggled
+### Project Options
+1. **Left or Right** - Create a sketch where a text display indicates whether the cursor is on the left or right side of the canvas
+2. **Billiard Ball** - Create a sketch with a moving ball that bounces off the edges of the canvas. Take care that the ball never appears to overlap the edge of the canvas
+3. **One-Person Pong** - Create a sketch that recreates the game of Pong for a single user. Can you add a scoring system?
+4. **Choose Your Own Adventure** - Create a branching narrative experience where clicking in different regions of the screen leads to different rooms, situations, and outcomes. Enhance the experience with sound effects and ambient audio recordings
+5. **State Machine I** - Place a white square on a gray background. A click inside the square turns it black, after which it stays that way. Clicks outside the square have no effect
+6. **State Machine II** - Place a white square on a gray background. Each click inside the square flips its color: white to black (if white) or black to white (if black)
+7. **State Machine III** - Place a white square on a gray background. Two clicks in the square are required to turn it from white to black, but three clicks are required to turn it from black to white
+8. **State Machine IV** - Place a white square on a gray background. Turn the square into a button with a "hover" state: white when inactive, yellow when the user is hovering over it (without having clicked), and black when the user is actively holding the mouse button down inside of it
 
 ---
 
-## Starter Code
-Open `Day_3_Activity_creature/Day_3_Activity_creature.pde` to begin.
+## Getting Started
+Create a new sketch folder for your chosen project.
 
 ## Homework
 - [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)

@@ -11,7 +11,8 @@
 ## Activity: Review Practice
 - Work through practice problems from Study Guide
 - Complete Practice Quiz
+- Continue polishing your Conditional Testing project from Days 3-5
 - Review common mistakes and misconceptions
 
 ## Homework
-- Review any/all String, boolean, and conditional material covered in day 1-5 of this unit 
+- Review any/all String, boolean, and conditional material covered in day 1-5 of this unit
