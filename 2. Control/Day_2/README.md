@@ -18,7 +18,7 @@ Create a  particle system that generates unique visual compositions.
 Create a simple particle generator that fills the screen with dots.
 - Click to spawn 10 random dots at your mouse position
 - Each dot has a random size between 5 and 20
-- Each dot has a random grayscale color (use `random(256)`)
+- Each dot has a random grayscale color (use `random(255)`)
 - Click to clear the canvas
 
 ### Level 2: Color Explosion
