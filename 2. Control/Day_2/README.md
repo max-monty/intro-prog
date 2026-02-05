@@ -10,41 +10,21 @@
 
 ---
 
-## Activity: Particle Universe
+## Activity: Unpredictability Project
 
-Create a mesmerizing particle system that generates unique visual compositions. Every run creates art that has never existed before!
+Choose one of the following project prompts to explore randomness in Processing:
 
-### Level 1: Stardust
-Create a simple particle generator that fills the screen with dots.
-- Click to spawn 10 random dots at your mouse position
-- Each dot has a random size between 5 and 20
-- Each dot has a random grayscale color (use `random(256)`)
-- Press 'C' to clear the canvas
+![Project Prompts](random_prompts.png)
 
-### Level 2: Color Explosion
-Add color palettes and controlled randomness.
-- Create "warm" particles (reds, oranges, yellows - red channel high, blue channel low)
-- Create "cool" particles (blues, purples, cyans - blue channel high, red channel low)
-- Press 'W' for warm mode, 'C' for cool mode
-- Add transparency using a 4th parameter in `fill(r, g, b, alpha)`
-- Make particles vary in size based on distance from mouse
-
-### Level 3: Organic Flow
-Create particles that look natural and organic.
-- Spawn particles that slowly drift in random directions
-- Use `random(-2, 2)` for x and y velocity
-- Particles should fade out over time (decreasing alpha)
-- Add a "burst" mode: press SPACE to create an explosion of 100 particles
-- Layer particles to create depth (darker = further back)
-
-### Level 4: Living Canvas
-Create an evolving, interactive particle ecosystem.
-- Particles that are attracted to or repelled by the mouse
-- Different "species" of particles with unique behaviors
-- Particles that leave trails (don't clear background completely)
-- Particles that grow or shrink over their lifetime
-- Add a "gravity" mode: particles fall and bounce
-- Create "constellations" - particles that connect with lines when close
+### Project Options
+1. **Coin Toss** - Create a coin that's "tossed" every mouse click with equal odds for heads/tails
+2. **Roll the Dice** - Create a virtual die (or six!) that rolls on mouse click
+3. **Order to Chaos** - Interactive composition that shifts from order to chaos based on cursor position
+4. **Drunk Walk I: Brownian Motion** - Element that travels erratically, leaving a trail
+5. **Drunk Walk II: Random Lattice Walk** - Element with 1-in-4 chance of moving up/down/left/right
+6. **Drunk Walk III: Smoothed Noise** - Use Perlin noise for smooth, unpredictable animation
+7. **Exquisite Corpse Machine** - Randomly recombine drawings of heads, torsos, and legs
+8. **Intermittent Events** - Time-based sketch with sporadic, unpredictable events
 
 ---
 
