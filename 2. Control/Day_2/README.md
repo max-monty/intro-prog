@@ -28,8 +28,8 @@ Choose one of the following project prompts to explore randomness in Processing:
 
 ---
 
-## Starter Code
-Open `Day_2_Activity_particles/Day_2_Activity_particles.pde` to begin.
+## Getting Started
+Create a new sketch folder for your chosen project.
 
 ## Homework
 - [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)
