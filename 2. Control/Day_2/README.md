@@ -28,9 +28,6 @@ Choose one of the following project prompts to explore randomness in Processing:
 
 ---
 
-## Getting Started
-Create a new sketch folder for your chosen project.
-
 ## Homework
 - [Conditionals 2:02 - 2:28](https://www.youtube.com/watch?v=4JzDttgdILQ&t=7366s)
 - Code: any sketch that uses random to create a visual effect
