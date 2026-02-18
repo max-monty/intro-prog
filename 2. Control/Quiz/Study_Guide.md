@@ -1,28 +1,150 @@
-# Unit 2: Control - Study Guide
+# Unit 2: Control — Study Guide
 
-## Key Concepts & Definitions
+## Big Ideas
 
-### String Variables
-- **String**: A data type that holds text (sequences of characters)
-- **Declaration**: `String variableName = "text value";`
-- **Concatenation**: Combining strings using the `+` operator
-- Strings must be enclosed in double quotes `"like this"`
-- Numbers can be concatenated with strings: `"Score: " + 85` → `"Score: 85"`
+This unit is about two fundamental questions:
 
-### Randomness
-- **random(max)**: Returns a random float from 0 to max (not including max)
-- **random(min, max)**: Returns a random float from min to max
-- **int()**: Converts a float to an integer (removes decimal)
-- Random values are different each time the program runs
-- Use `int(random(1, 7))` to simulate a dice roll (1-6)
+1. **How do programs make decisions?** (Control Flow)
+2. **How do programs remember and change over time?** (State Management)
 
-### Boolean Variables
-- **boolean**: A data type that can only be `true` or `false`
-- **Declaration**: `boolean variableName = true;`
-- Used to track states (on/off, active/inactive)
-- **Toggle**: `variableName = !variableName;` (flips true↔false)
+### Control Flow: How Programs Decide
+
+Programs rarely do the same thing every time. Conditional statements (`if`, `else if`, `else`) let programs choose different paths based on current conditions. The key insight: **it's not just about whether a condition is true — it's about how conditions are structured, ordered, and combined.**
+
+- **Ordering matters**: In an else-if chain, the first true condition wins. Checking `>= 50` before `>= 100` catches everything above 50 and the later conditions never run.
+- **Structure matters**: Separate `if` statements each run independently. An `if-else if` chain runs exactly one branch.
+- **Combining matters**: `&&` requires ALL conditions to be true; `||` requires ANY. The choice between them changes program behavior completely.
+
+### State Management: How Programs Remember
+
+Variables store information, but the interesting question is: **how does that information change over time?**
+
+- A boolean that toggles on each click creates an on/off switch
+- An integer that increases each frame creates animation
+- A string built from a variable captures a *snapshot* — changing the variable later doesn't update the string
+- State only changes when code runs that changes it — if there's no event handler to modify a variable, it stays the same forever
+
+### They Work Together
+
+The most interesting programs combine both ideas: conditionals that check state, and events that change state. A click toggles a boolean, `draw()` checks that boolean, and the screen changes. Understanding this flow — **events modify state, draw reads state** — is the core mental model.
+
+---
+
+## Building on Unit 1
+
+Unit 2 doesn't replace Unit 1 — it builds on it. Here's how the pieces connect:
+
+| Unit 1 Concept | How It Connects to Unit 2 |
+|----------------|---------------------------|
+| `setup()` / `draw()` | `draw()` runs every frame, checking state and deciding what to display. Conditions in `draw()` make the display dynamic. |
+| Variables | Variables store state. Booleans track on/off. Integers track counts, positions, levels. Strings track labels and messages. |
+| Functions with return values | Functions can use conditionals to return different values based on input. A `getSpeed(health)` function might return 5.0 or 3.0 depending on the health value. |
+| Event handlers (`mousePressed`, `keyPressed`) | Events are where state changes happen. A click toggles a boolean. A key press adjusts a value. These changes then affect what `draw()` does next frame. |
+| The coordinate system | Conditions often involve positions: `if (mouseX < 200)` divides the screen in half. `if (ballX > width)` detects edges. |
+| `random()` | Random values combined with conditionals create varied behavior: `if (int(random(2)) == 0)` simulates a coin flip. |
+
+---
+
+## How to Think Through Code
+
+### Strategy 1: Trace Like a Computer
+
+When you see code with conditionals:
+
+1. Write down the current values of all variables
+2. Go through each condition in order — which is the first one that's true?
+3. Execute ONLY that branch (in an else-if chain)
+4. Update any variables that change
+5. Ask: if this is in `draw()`, what happens next frame?
+
+### Strategy 2: Think About What Triggers Change
+
+- What events can the user trigger? (clicks, key presses)
+- What does each event handler do to the state?
+- What does `draw()` do with the current state?
+- Is there any state that *nothing* ever changes? (If so, that code path is fixed)
+
+### Strategy 3: Check the Structure
+
+- **Else-if chain?** → Exactly ONE branch runs (first true condition wins)
+- **Separate if statements?** → EACH one is checked independently (multiple can run)
+- **Nested ifs?** → ALL outer conditions must be true to even reach inner ones
+
+### Strategy 4: Test the Boundaries
+
+- What happens at the exact boundary value? (Does `> 100` include 100? No. Does `>= 100`? Yes.)
+- What happens at 0? At the maximum? At negative numbers?
+- Did the programmer handle all possible cases?
+
+---
+
+## Practice Thought Exercises
+
+Try these quick reasoning challenges. No code to write — just think.
+
+1. A boolean starts as `false` and gets toggled 7 times. What is its final value? What about 10 times?
+
+2. An if-else if-else chain has 4 conditions, and ALL four happen to be true for the current values. How many branches actually execute?
+
+3. Four separate `if` statements (not connected by else). All 4 conditions are true. How many execute?
+
+4. `mousePressed()` adds 1 to a counter. `keyPressed()` resets it to 0. The user clicks 5 times, presses a key, then clicks 3 times. What's the counter?
+
+5. A variable `x = 0` is declared globally. In `draw()`, the line `x = x + 1` runs every frame. Processing runs `draw()` about 60 times per second. What is `x` after 2 seconds?
+
+6. What's the difference between `if (score > 90)` and `if (score >= 90)` when score is exactly 90?
+
+7. You write `String msg = "Lives: " + lives;` when `lives` is 3. Then `lives` changes to 2. You print `msg`. What do you see?
+
+8. A sketch has `background(220)` at the top of `draw()` and no other calls to `background()`. What would go wrong if you removed it?
+
+<details>
+<summary>Answers</summary>
+
+1. After 7 toggles: `true` (odd number of toggles = opposite of start). After 10: `false` (even number = same as start).
+
+2. Exactly 1. An else-if chain stops at the first true condition.
+
+3. All 4. Separate if statements are independent — each is checked regardless of the others.
+
+4. 3. The key press resets to 0, then 3 more clicks bring it to 3.
+
+5. 120. Sixty frames per second × 2 seconds = 120 frames, each adding 1.
+
+6. `> 90` is false when score is 90 (strictly greater than). `>= 90` is true (greater than *or equal to*).
+
+7. "Lives: 3" — the string was built when lives was 3. Changing lives later doesn't update the already-built string.
+
+8. Previous frames' drawings wouldn't be erased. Shapes would pile up and "smear" across the screen instead of showing a clean frame each time.
+
+</details>
+
+---
+
+## Syntax Quick Reference
+
+*This section is for looking things up, not for memorizing.*
+
+### Conditionals
+
+```processing
+// If
+if (condition) { ... }
+
+// If-else
+if (condition) { ... } else { ... }
+
+// If-else if-else chain (first true branch wins)
+if (cond1) { ... } else if (cond2) { ... } else { ... }
+
+// Nested (both must be true for inner code to run)
+if (outerCond) {
+    if (innerCond) { ... }
+}
+```
 
 ### Comparison Operators
+
 | Operator | Meaning |
 |----------|---------|
 | `==` | Equal to |
@@ -32,243 +154,37 @@
 | `<=` | Less than or equal to |
 | `>=` | Greater than or equal to |
 
-### If Statements
-- **if statement**: Executes code only when a condition is true
-- Syntax:
-```processing
-if (condition) {
-  // code runs if condition is true
-}
-```
-
-### If-Else Statements
-- **if-else**: Provides an alternative when condition is false
-- Syntax:
-```processing
-if (condition) {
-  // code runs if true
-} else {
-  // code runs if false
-}
-```
-
-### If-Else If-Else Chains
-- Tests multiple conditions in order
-- First true condition "wins" - only one block executes
-- Syntax:
-```processing
-if (condition1) {
-  // runs if condition1 is true
-} else if (condition2) {
-  // runs if condition1 false AND condition2 true
-} else if (condition3) {
-  // runs if both above false AND condition3 true
-} else {
-  // runs if ALL conditions are false
-}
-```
-
-### Nested If Statements
-- An if statement inside another if statement
-- Used when you need to check conditions in sequence
-- Syntax:
-```processing
-if (outerCondition) {
-  if (innerCondition) {
-    // runs only if BOTH conditions are true
-  }
-}
-```
-
 ### Logical Operators
-| Operator | Name | Meaning |
-|----------|------|---------|
-| `&&` | AND | Both conditions must be true |
-| `\|\|` | OR | At least one condition must be true |
-| `!` | NOT | Reverses true/false |
 
----
+| Operator | Meaning | True when... |
+|----------|---------|--------------|
+| `&&` | AND | Both sides are true |
+| `\|\|` | OR | At least one side is true |
+| `!` | NOT | The value is false |
 
-## Syntax Reference
+### Booleans & Toggling
 
-### String Operations
 ```processing
-// Declaration
+boolean active = false;
+active = !active;  // Toggles: false → true → false → ...
+```
+
+### Strings
+
+```processing
 String name = "Alice";
-String greeting = "Hello";
-
-// Concatenation
-String message = greeting + ", " + name + "!";  // "Hello, Alice!"
-
-// With numbers
-int score = 100;
-String result = "Score: " + score;  // "Score: 100"
-
-// Display
-text(message, 200, 150);
+String msg = "Hello, " + name + "!";  // "Hello, Alice!"
+int score = 42;
+String display = "Score: " + score;   // "Score: 42"
 ```
 
-### Random Values
+### Random
+
 ```processing
-// Random float from 0 to 99.999...
-float r = random(100);
-
-// Random float from 50 to 149.999...
-float r = random(50, 150);
-
-// Random integer from 1 to 6 (dice roll)
-int dice = int(random(1, 7));
-
-// Random position
-float x = random(width);
-float y = random(height);
-
-// Random color
-fill(random(256), random(256), random(256));
+float r = random(100);        // 0 to 99.999...
+float r = random(50, 150);    // 50 to 149.999...
+int dice = int(random(1, 7)); // 1 to 6 (integer)
 ```
-
-### Boolean Operations
-```processing
-// Declaration
-boolean isActive = true;
-boolean gameOver = false;
-
-// Toggle
-isActive = !isActive;  // true → false, false → true
-
-// In conditions
-if (isActive) {
-  // runs when isActive is true
-}
-
-if (!gameOver) {
-  // runs when gameOver is false
-}
-```
-
-### Comparison Examples
-```processing
-int x = 10;
-
-x == 10   // true (equals)
-x != 5    // true (not equals)
-x < 15    // true (less than)
-x > 5     // true (greater than)
-x <= 10   // true (less than or equal)
-x >= 10   // true (greater than or equal)
-```
-
-### Logical Operator Examples
-```processing
-int age = 25;
-boolean hasID = true;
-
-// AND - both must be true
-if (age >= 21 && hasID) {
-  // runs only if 21+ AND has ID
-}
-
-// OR - at least one must be true
-if (age < 13 || age >= 65) {
-  // runs if under 13 OR 65+
-}
-
-// NOT - reverses condition
-if (!hasID) {
-  // runs if hasID is false
-}
-```
-
----
-
-## Common Patterns
-
-### State Toggle with keyPressed
-```processing
-boolean lightOn = false;
-
-void keyPressed() {
-  if (key == ' ') {
-    lightOn = !lightOn;  // Toggle on space
-  }
-}
-```
-
-### Grade Calculator Pattern
-```processing
-if (score >= 90) {
-  grade = "A";
-} else if (score >= 80) {
-  grade = "B";
-} else if (score >= 70) {
-  grade = "C";
-} else if (score >= 60) {
-  grade = "D";
-} else {
-  grade = "F";
-}
-```
-
-### Mouse Zone Detection
-```processing
-if (mouseX < width/2) {
-  // Left side
-} else {
-  // Right side
-}
-```
-
-### Nested Zone Detection
-```processing
-if (mouseX > 100 && mouseX < 300) {
-  if (mouseY > 100 && mouseY < 200) {
-    // Inside the box
-  }
-}
-```
-
-### Random with Constraints
-```processing
-// Random bright color only
-float r = random(150, 256);
-float g = random(150, 256);
-float b = random(150, 256);
-
-// Random position within a region
-float x = random(100, 300);  // Between x=100 and x=300
-```
-
----
-
-## Quick Reference: Common Mistakes
-
-| Mistake | Correct |
-|---------|---------|
-| `if (x = 5)` | `if (x == 5)` - use == for comparison |
-| `String s = hello` | `String s = "hello"` - strings need quotes |
-| `if x > 5` | `if (x > 5)` - conditions need parentheses |
-| `if (x > 5);` | `if (x > 5)` - no semicolon after condition |
-| `random(1, 6)` for dice | `int(random(1, 7))` - use 7 to include 6 |
-| Checking ranges wrong order | Check specific ranges first (90+, then 80+, etc.) |
-
----
-
-## Practice Checklist
-
-- [ ] I can declare and use String variables
-- [ ] I can concatenate strings with text and numbers
-- [ ] I can use random() to generate random values
-- [ ] I can convert random floats to integers with int()
-- [ ] I can declare and use boolean variables
-- [ ] I can toggle a boolean value
-- [ ] I can write if statements with comparison operators
-- [ ] I can write if-else statements
-- [ ] I can write if-else if-else chains
-- [ ] I can nest if statements inside other if statements
-- [ ] I can use && (AND) to require multiple conditions
-- [ ] I can use || (OR) to allow alternative conditions
-- [ ] I can use ! (NOT) to reverse a condition
-- [ ] I can trace through conditional code and predict output
 
 ---
 
@@ -276,12 +192,17 @@ float x = random(100, 300);  // Between x=100 and x=300
 
 | Term | Definition |
 |------|------------|
-| String | Data type for text |
-| Concatenation | Combining strings with + |
-| Boolean | Data type for true/false |
-| Condition | Expression that evaluates to true or false |
-| Comparison operator | Symbols that compare values (==, <, >, etc.) |
-| Logical operator | Symbols that combine conditions (&&, \|\|, !) |
-| Nested | One structure inside another |
-| Toggle | Switch between two states |
-| random() | Function that returns a random number |
+| Condition | An expression that evaluates to true or false |
+| Boolean | A data type that holds only `true` or `false` |
+| Toggle | Switching a boolean to its opposite value using `!` |
+| Control flow | The order in which statements are executed in a program |
+| If-else if chain | A series of connected conditions where only the first true branch runs |
+| Independent ifs | Separate if statements that each run regardless of the others |
+| Nested conditional | An if statement inside another if statement |
+| Logical operator | `&&` (AND), `||` (OR), `!` (NOT) — combine or modify conditions |
+| Comparison operator | `==`, `!=`, `<`, `>`, `<=`, `>=` — compare values |
+| State | The values stored in a program's variables at a given moment |
+| State change | When an event or code modifies a variable's value |
+| Boundary value | A value at the exact edge of a condition (e.g., exactly 100 for `> 100`) |
+| String | A data type that holds text |
+| Concatenation | Combining strings (and other values) using the `+` operator |
