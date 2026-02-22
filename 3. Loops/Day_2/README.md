@@ -12,8 +12,6 @@
 
 ## Activity: Pattern Generator
 
-Choose one of the following project prompts to explore for loops. Each is inspired by iteration exercises from *Code as Creative Medium*.
-
 ### Project Options
 
 1. **Lines to the Cursor** - Use a for loop to draw 10+ lines from evenly spaced points along the bottom of the canvas, all connecting to the mouse position. Change line color or weight based on the loop variable.
@@ -31,9 +29,3 @@ Choose one of the following project prompts to explore for loops. Each is inspir
 7. **Dashed Line** - Write a for loop that draws a dashed line from one point to the mouse cursor. Each dash has a fixed length with a gap between. Longer distances = more dashes.
 
 8. **Geometric Progression** - Draw shapes that grow by a constant ratio (each 1.3x larger than the last). Try concentric circles or a row of growing rectangles. Use `fill()` variations to emphasize the progression.
-
----
-
-## Homework
-- Continue working on your pattern. Try adding a second for loop to your sketch.
-- Code: A sketch that uses a for loop to create a visual pattern with at least 15 shapes
