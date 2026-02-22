@@ -2,7 +2,7 @@
 
 ## Topics
 - Applying while and for loops creatively
-- Nested loops for 2D patterns (introduction for advanced students)
+- Advanced: nested loops for 2D patterns 
 - Combining loops with all prior concepts
 - Designing visual patterns through iteration
 
@@ -26,7 +26,7 @@ Choose ONE project from the following options to create a polished piece of loop
 
 6. **Personal Project** - Design your own loop-based artwork. Must use at least two for or while loops and incorporate at least two concepts from previous units.
 
-### Level Expectations (for any project)
+### Levels
 
 #### Level 1: Foundation
 - Uses at least one for or while loop correctly
