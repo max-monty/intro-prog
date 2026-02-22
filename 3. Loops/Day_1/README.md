@@ -12,8 +12,6 @@
 
 ## Activity: Row of Shapes
 
-Create a visual composition by drawing repeated shapes across the canvas using while loops. Inspired by "Simple Iteration" exercises from *Code as Creative Medium*.
-
 ### Level 1: Seven Circles
 Use a while loop to draw a row of 7 circles evenly spaced across the canvas.
 - Declare a counter variable (e.g., `int x = 50;`)
@@ -44,9 +42,3 @@ Use a while loop to create a landscape with depth illusion.
 - Make the scene interactive: use `mouseX`/`mouseY` to shift the vanishing point
 - Add an `if` statement that changes line style based on position
 - Try using a custom function to draw each line with its effects
-
----
-
-## Homework
-- Watch: [For Loops (Coding Train 3:12 - 3:34)](https://www.youtube.com/watch?v=4JzDttgdILQ&t=11520s)
-- Code: Use a while loop to draw at least 10 shapes in a pattern
