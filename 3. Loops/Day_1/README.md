@@ -20,12 +20,16 @@ Use a while loop to draw a row of 7 circles evenly spaced across the canvas.
 - Increment x by a fixed spacing each iteration
 - Use `fill()` to give each circle a color
 
+![Project Prompts](Dots.png)
+
 ### Level 2: Transitioning Row
 Make each shape in your row look different by linking visual properties to the loop variable.
 - Change the **size** of each shape based on its position (small on the left, large on the right)
 - Change the **color** of each shape (dark to light, or cycle through a palette)
 - Use at least TWO visual properties that change with the loop variable
 - Try using `map()` to convert the x position into a color or size range
+
+![Project Prompts](Transition.png)
 
 ### Level 3: Gradient Bar
 Create a smooth color gradient using a while loop that draws many thin rectangles side by side.
@@ -34,6 +38,8 @@ Create a smooth color gradient using a while loop that draws many thin rectangle
 - Use `map()` to calculate color values from position
 - Try making the gradient respond to `mouseX` (shift the start or end color)
 - Add subtle `random()` variation to each rectangle's color
+
+![Project Prompts](Activity3.png)
 
 ### Level 4: Receding Landscape
 Use a while loop to create a landscape with depth illusion.
