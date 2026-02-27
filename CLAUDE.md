@@ -132,6 +132,15 @@ After creating or modifying lesson content:
 6. Verify the full structure matches conventions
 7. Present the finished unit
 
+## Assessment Sync
+
+Quiz and mini-quiz files are **gitignored** in this repo (the repo is public for students). A separate private repo at `~/Developer/assessments` holds all assessment materials, shared with another teacher.
+
+- **Auto-sync**: A git `post-commit` hook (`.git/hooks/post-commit`) detects changes to `Mini_Quizzes/` or `Quizzes/` and runs `.claude/sync-assessments.sh`, which rsyncs the files to `~/Developer/assessments/intro/` and auto-commits/pushes.
+- **Manual sync**: Run `bash .claude/sync-assessments.sh` if needed.
+- When creating or modifying quiz/mini-quiz files, they must also exist locally in `Mini_Quizzes/` and `Quizzes/` even though they're gitignored. The sync script handles copying them to the assessments repo.
+- Do **not** `git add -f` quiz files in this repo — they should stay gitignored.
+
 ## Processing-Specific Notes
 
 - `processing-java` CLI: `processing-java --sketch=/path/to/sketch_folder --run`
