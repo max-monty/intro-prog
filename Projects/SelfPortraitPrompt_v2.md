@@ -14,13 +14,15 @@ A self-portrait can be:
 
 Click these to see interactive examples — move your mouse, click, press keys:
 
-- [Nathan Smallwood — Interactive Self-Portrait](https://openprocessing.org/sketch/7639/) — mouse over to discover hidden interactions
-- [Angela Stempel — Hitchcock-Style Portrait](https://openprocessing.org/sketch/65180/) — stylized, dramatic, personality-driven
-- [CoderJay — Animated Self-Portrait](https://editor.p5js.org/CoderJay/sketches/7SmQTTkn2) — blinking, moving, alive
-- [Pixel Self Portrait](https://openprocessing.org/sketch/188858) — a face rendered as a grid of colored pixels
-- [Jeremy LeMaster — Self-Portrait](https://openprocessing.org/sketch/2355633/) — student-made creative portrait
-- [Jacob Joaquin — Self Portrait JS](https://openprocessing.org/sketch/409770) — generative/algorithmic approach
-- [Portrait Painter — Jason Labbe](https://openprocessing.org/sketch/392202/) — dynamic brush-stroke portrait
+- [Flashing lights and Growing Eyes](https://editor.p5js.org/Amelia_Yang/full/_6-L21iIm)
+- [I'm Watching You!](https://editor.p5js.org/MarvenMa/full/xVTQTtWXK) 
+- [GUI-based Danceer](https://editor.p5js.org/CoderJay/full/7SmQTTkn2)
+- [Pixel Face](https://openprocessing.org/sketch/188858)
+- [Hair Grower](https://editor.p5js.org/jinnie75/full/wbg8eWyDv)
+- [Sad Eyes](https://editor.p5js.org/LUNAPARK1/full/YbAevJ5nF) 
+- [Pixel Eyes](https://editor.p5js.org/AudreyDahyungOh/full/RJFedroNT)
+- [Reach For the Sky](https://editor.p5js.org/Chris-ITP/full/Ya5p9hfcvl)
+- [Paint and Follow](https://editor.p5js.org/ranjanir/full/dTnXjDjgS)
 
 Notice how each one feels different. Some are funny, some are moody, some are precise, some are chaotic. **Your portrait should have a feeling too.**
 
@@ -105,8 +107,6 @@ This project is cumulative — you should use concepts from **all three units**.
 | **Interactivity** | Multiple interactive features that feel intentional and enhance the portrait's personality | At least one solid interactive feature (click, key, or mouse position) | Limited or incorrect interactivity | No interactivity |
 | **Creative Expression** | Highly original; portrait communicates personality, mood, or identity in a surprising or meaningful way | Creative design choices; shows thoughtfulness about self-representation | Basic portrait with limited personal expression | Generic or underdeveloped; doesn't feel personal |
 | **Code Quality** | Well-organized with section comments, descriptive names, and custom function(s); clean and readable | Mostly organized; descriptive variable names; few errors | Some organization but messy or hard to follow | Significant errors; no comments; unclear naming |
-
-**Total: _____ / 24**
 
 ---
 
