@@ -1,4 +1,4 @@
-# Project: Self-Portrait — Code Your Identity
+# Project: Self-Portrait
 
 Your self-portrait doesn't have to look like a photograph. It should look like **you** — your personality, your vibe, your energy. Use code to express something about who you are that a camera can't capture.
 
