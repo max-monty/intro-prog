@@ -8,8 +8,6 @@ A self-portrait can be:
 - **Symbolic** — objects, patterns, or scenes that say something about you without showing a face
 - **Surreal** — a dreamlike or exaggerated version of yourself
 
-The only rule: someone who knows you should look at it and say *"yeah, that's you."*
-
 ---
 
 ## Inspiration
