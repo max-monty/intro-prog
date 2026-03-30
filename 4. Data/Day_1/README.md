@@ -21,4 +21,4 @@ Start with your bars from Exercise 1. Now draw them in **reverse order** — las
 ![alt text](reverse_bars.png)
 
 ## Exercies 3: Extend Bouncing Balls
-Create a new version of your bouncing ball sketch with multiple balls. Loop through arrays of xPositions, yPositions, xSpeeds, and ySpeeds to make the balls move and bounce of the walls.
+Create a new version of your bouncing ball sketch with multiple balls. Loop through arrays of xPositions, yPositions, xSpeeds, and ySpeeds to make the balls move and bounce off the walls.
