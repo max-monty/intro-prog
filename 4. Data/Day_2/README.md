@@ -7,10 +7,14 @@
 
 ---
 
-## Exercise 1: Dot Echo
+## Exercise 1: Fill array
+Create two empty arrays xPos and yPos. Fill those arrays with random values using a loop. Use another loop to display the items on the screen. Use `map()` on the index to change the color based on the position in the array.
+
+
+## Exercise 2: Dot Echo
 Create an array of 10 floats. Each frame, shift all values down one index and store `mouseX` at position 0. Draw a circle at each stored x-position (all at the same y). You should see 10 dots trailing your mouse horizontally.
 
-## Exercise 2: Living Line
+## Exercise 3: Living Line
 *Inspired by Code as Creative Medium (p. 160)*
 
 Store the last 50 mouse positions using two arrays (one for x, one for y). Instead of drawing circles, draw **lines between consecutive points** to create a continuous polyline that follows your cursor. Use `map()` on the index so newer segments are brighter and older ones fade out. If you want more of a challenge, make the stroke thickness change based on how fast the mouse is moving — use `dist()` between consecutive points to measure speed. Fast = thin, slow = thick, like a calligraphy pen.
