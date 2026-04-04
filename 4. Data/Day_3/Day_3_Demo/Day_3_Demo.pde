@@ -5,7 +5,7 @@ float[] vals = new float[10];
 void setup() {
   size(600, 300);
   for (int i = 0; i < vals.length; i++) {
-    vals[i] = random(20, 200);
+    vals[i] = random(10, 400);
   }
 }
 
