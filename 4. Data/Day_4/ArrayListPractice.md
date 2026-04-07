@@ -11,7 +11,7 @@ Create an ArrayList of Float values for x positions and another for y positions.
 
 ## Sketch 2: Moving Dot Trail
 
-Create an ArrayList for x positions and another for y positions. Every frame in `draw()`, add `mouseX` and `mouseY` to your ArrayLists. Then loop through and draw a small circle at every stored position. Watch your cursor leave a trail of dots across the screen. Add ArrayLists for xSpeeds and ySpeeds for every dot. When each dot is created, give in a random xSpeed and ySpeed. Update each dots position each frame with this speed. For a challenge, have it update each frame using noise()
+Create an ArrayList for x positions and another for y positions. Every frame in `draw()`, add `mouseX` and `mouseY` to your ArrayLists. Then loop through and draw a small circle at every stored position. Watch your cursor leave a trail of dots across the screen. Add ArrayLists for xSpeeds and ySpeeds. When each dot is created, give it a random xSpeed and ySpeed. Update each dots position each frame with this speed. For a challenge, have it update each frame using noise()
 
 
 
