@@ -349,7 +349,7 @@ void keyPressed() {
 
 **9. b)** `"4 2"`. The loop doubles every element: `{4, 7, 2, 9, 1}` becomes `{8, 14, 4, 18, 2}`. Then `vals[2]` is 4 and `vals[4]` is 2. The print shows the modified values, not the originals.
 
-**10. b)** Rings get bigger, then are removed. Each frame the radius grows by 1.5. Once the radius is past 120, the ring is removed from all three lists.
+**10. a)** Rings get bigger, then are removed. Each frame the radius grows by 1.5. Once the radius is past 120, the ring is removed from all three lists.
 
 ### Part 2: Free Response
 
