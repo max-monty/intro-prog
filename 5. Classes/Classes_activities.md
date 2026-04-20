@@ -1,8 +1,4 @@
-# Processing Class Activities
-
-A series of activities to practice creating and using classes in Processing. Each activity builds on the previous one in difficulty.
-
----
+Progress through these activities, which, by using classes, build up to a full-game implementation. When you finish, create your own.
 
 ## Activity 1: Moving Ball
 
