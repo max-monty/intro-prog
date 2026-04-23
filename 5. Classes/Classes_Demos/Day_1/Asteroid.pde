@@ -27,6 +27,6 @@ class Asteroid {
   void display() {
     fill(c);
     noStroke();
-    ellipse(x, y, size, size);
+    circle(x, y, size);
   }
 }
