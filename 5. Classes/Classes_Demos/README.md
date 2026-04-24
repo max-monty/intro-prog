@@ -38,8 +38,7 @@
 
 **Key moments to highlight:**
 - The new `Player` class is structured like `Asteroid`: fields, constructor, `update()`, `display()`.
-- `hitsPlayer(Player p)` — a method on one class that takes another class's object as a parameter. This is the big new idea.
-- **Getters** (`getX()`, `getY()`, `getSize()`) let `Asteroid` read the player's state without touching Player's fields directly.
+- `hitsPlayer(Player p)` — a method on one class that takes another class's instance variables as parameters. This is the big new idea.
 - Nothing is removed yet and there's no score — just show the interaction working.
 
 ---
