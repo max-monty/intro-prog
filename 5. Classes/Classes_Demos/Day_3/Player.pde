@@ -1,6 +1,6 @@
-// The Player class - NEW for Day 3.
-// The player is controlled by the arrow keys.
-// It has getter methods so other objects (like Asteroid) can check its position.
+// The Player class is below. Create an array of 10 Player objects
+// 1. Declare the length 10 array
+// 2. Fill that array with new instances of Player
 
 class Player {
   float x, y;
@@ -32,8 +32,4 @@ class Player {
              x,          y - size/2);
   }
 
-  // Getters so the Asteroid class can read the player's position.
-  float getX() { return x; }
-  float getY() { return y; }
-  float getSize() { return size; }
 }
