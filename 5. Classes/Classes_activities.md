@@ -54,7 +54,6 @@ Create three classes that work together to form a complete game.
 
 ### `Player`
 - Controlled by the arrow keys.
-- Has `display()` and `getX()` / `getY()` methods so other classes can check distance to the player.
 
 ### `Zombie`
 - Spawns at a random edge of the screen.
