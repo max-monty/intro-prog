@@ -28,7 +28,4 @@ class Player {
              x,          y - size/2);
   }
 
-  float getX() { return x; }
-  float getY() { return y; }
-  float getSize() { return size; }
 }

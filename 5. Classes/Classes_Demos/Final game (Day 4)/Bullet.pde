@@ -5,7 +5,7 @@ class Bullet {
   float x, y;
   float speed;
   float size;
-
+  
   Bullet(float startX, float startY) {
     x = startX;
     y = startY;
@@ -26,8 +26,4 @@ class Bullet {
   boolean isOffScreen() {
     return y < -size;
   }
-
-  float getX() { return x; }
-  float getY() { return y; }
-  float getSize() { return size; }
 }

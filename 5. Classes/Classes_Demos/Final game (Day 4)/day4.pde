@@ -55,7 +55,7 @@ void draw() {
     // Check if any bullet hit this asteroid
     boolean destroyed = false;
     for (int j = bullets.size() - 1; j >= 0; j--) {
-      if (a.hitsBullet(bullets.get(j))) {
+      if (a.hitsBullet(bullets.get(j).x, bullets.get(j).y, bullets.get(j).size)) {
         bullets.remove(j);
         destroyed = true;
         score += 10;
@@ -69,7 +69,7 @@ void draw() {
     }
 
     // Check if this asteroid hit the player
-    if (a.hitsPlayer(player)) {
+    if (a.hitsPlayer(player.x, player.y, player.size)) {
       asteroids.remove(i);
       lives--;
       if (lives <= 0) {
@@ -83,7 +83,7 @@ void draw() {
 
 void keyPressed() {
   if (key == ' ' && !gameOver) {
-    bullets.add(new Bullet(player.getX(), player.getY()));
+    bullets.add(new Bullet(player.x, player.y));
   }
   if (key == 'r' && gameOver) {
     restart();

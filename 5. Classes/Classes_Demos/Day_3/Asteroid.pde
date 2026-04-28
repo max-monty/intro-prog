@@ -30,9 +30,9 @@ class Asteroid {
     ellipse(x, y, size, size);
   }
 
-  // NEW: takes a Player object, uses its getters to check for overlap.
-  boolean hitsPlayer(Player p) {
-    float d = dist(x, y, p.x, p.y);
-    return d < (size/2 + p.size/2);
+  // Takes a Player object, uses its instance variables to check for overlap.
+  boolean hitsPlayer(float playerX, float playerY, float playerSize) {
+    float d = dist(x, y, playerX, playerY);
+    return d < (size/2 + playerSize/2);
   }
 }

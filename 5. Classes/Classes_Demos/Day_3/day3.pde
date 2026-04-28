@@ -27,8 +27,8 @@ void draw() {
     asteroids[i].display();
 
     // The asteroid checks if it hit the player.
-    // We pass the player OBJECT to the method.
-    if (asteroids[i].hitsPlayer(player)) {
+    // We pass the player instance variables to the method.
+    if (asteroids[i].hitsPlayer(player.x, player.y, player.size)) {
       fill(255, 0, 0);
       textAlign(CENTER);
       textSize(48);

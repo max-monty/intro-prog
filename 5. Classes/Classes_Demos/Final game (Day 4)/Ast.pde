@@ -29,14 +29,14 @@ class Asteroid {
     ellipse(x, y, size, size);
   }
 
-  boolean hitsPlayer(Player p) {
-    float d = dist(x, y, p.getX(), p.getY());
-    return d < (size/2 + p.getSize()/2);
+  boolean hitsPlayer(float playerX, float playerY, float playerSize) {
+    float d = dist(x, y, playerX, playerY);
+    return d < (size/2 + playerSize/2);
   }
 
   // NEW: takes a Bullet object and checks for collision.
-  boolean hitsBullet(Bullet b) {
-    float d = dist(x, y, b.getX(), b.getY());
-    return d < (size/2 + b.getSize()/2);
+  boolean hitsBullet(float bulletX, float bulletY, float bulletSize) {
+    float d = dist(x, y, bulletX, bulletY);
+    return d < (size/2 + bulletSize/2);
   }
 }
