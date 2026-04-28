@@ -32,7 +32,7 @@ class Asteroid {
 
   // NEW: takes a Player object, uses its getters to check for overlap.
   boolean hitsPlayer(Player p) {
-    float d = dist(x, y, p.getX(), p.getY());
-    return d < (size/2 + p.getSize()/2);
+    float d = dist(x, y, p.x, p.y);
+    return d < (size/2 + p.size/2);
   }
 }

@@ -8,7 +8,7 @@ Asteroid[] asteroids;
 
 void setup() {
   size(500, 600);
-  asteroids = new Asteroid[8];
+  asteroids = new Asteroid[2];
 
   // Each asteroid gets its OWN x and size, passed in as arguments.
   for (int i = 0; i < asteroids.length; i++) {

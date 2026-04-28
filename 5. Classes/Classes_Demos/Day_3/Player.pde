@@ -31,9 +31,4 @@ class Player {
              x + size/2, y + size/2,
              x,          y - size/2);
   }
-
-  // Getters so the Asteroid class can read the player's position.
-  float getX() { return x; }
-  float getY() { return y; }
-  float getSize() { return size; }
 }
